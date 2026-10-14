@@ -3,389 +3,66 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Wheek &amp; Seek – Meerschweinchen-Abenteuer · Kostenlos im Browser spielen</title>
-<meta name="description" content="Wheek &amp; Seek: Mit Timmy und Dotty durch Garten, Wald und Bauernhof schnüffeln, Futter finden und den Schnecken entwischen. Kostenlos im Browser, am PC, Tablet und Handy. Für Kinder ab 7.">
-<meta property="og:title" content="Wheek &amp; Seek – Meerschweinchen-Abenteuer">
-<meta property="og:description" content="Schnüffeln, Futter finden, Schnecken entwischen: ein gemütliches Abenteuer mit zwei Meerschweinchen. Kostenlos im Browser.">
-<meta property="og:image" content="https://wheek-and-seek.denkgold.de/img/og.jpg">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:url" content="https://wheek-and-seek.denkgold.de/">
-<meta property="og:type" content="website">
-<meta name="twitter:card" content="summary_large_image">
-<link rel="canonical" href="https://wheek-and-seek.denkgold.de/">
+<title>Wheek &amp; Seek – im Umbau</title>
+<meta name="description" content="Wheek &amp; Seek wird umgebaut: ein neues Meerschweinchen-Duell kommt. Bis dahin kostenlos spielbar bei CrazyGames.">
+<meta name="robots" content="index,follow">
 <meta name="theme-color" content="#1b3219">
+<link rel="canonical" href="https://wheek-and-seek.denkgold.de/">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 <link rel="preload" href="fonts/fredoka-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"VideoGame","name":"Wheek & Seek","url":"https://wheek-and-seek.denkgold.de/","image":"https://wheek-and-seek.denkgold.de/img/og.jpg","description":"Ein gemütliches Meerschweinchen-Abenteuer: schnüffeln, Futter finden und den Schnecken entwischen. Kostenlos im Browser.","genre":["Adventure","Casual","Family"],"gamePlatform":["Web browser","PC","Mobile"],"playMode":"SinglePlayer","inLanguage":["en","de","es","pt-BR","fr","it","pl","tr"],"offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"publisher":{"@type":"Organization","name":"denkgold"}}
-</script>
 <style>
 @font-face{font-family:Fredoka;src:url(fonts/fredoka-latin-400-normal.woff2) format('woff2');font-weight:400;font-display:swap}
 @font-face{font-family:Fredoka;src:url(fonts/fredoka-latin-600-normal.woff2) format('woff2');font-weight:600;font-display:swap}
 @font-face{font-family:Fredoka;src:url(fonts/fredoka-latin-700-normal.woff2) format('woff2');font-weight:700;font-display:swap}
-:root{
-  --cream:#fbf6ea;--cream2:#f3ecdb;--card:#fffdf7;--ink:#24361f;--muted:#5d6b55;--line:rgba(36,54,31,.12);
-  --leaf:#7cc443;--leaf2:#4f9a2c;--deep:#1b3219;--carrot:#ff9a1f;--carrot2:#f07d00;--gold:#ffc83d;--sky:#bfe6ff;
-  --r:22px;--max:1160px;--ease:cubic-bezier(.2,.8,.2,1);
-}
+:root{--cream:#fbf6ea;--ink:#24361f;--muted:#5d6b55;--leaf:#7cc443;--leaf2:#4f9a2c;--deep:#1b3219;--carrot:#ff9a1f;--carrot2:#f07d00}
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:76px;-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--cream);color:var(--ink);font:400 18px/1.6 Fredoka,system-ui,sans-serif;overflow-x:hidden;-webkit-font-smoothing:antialiased}
-img{display:block;max-width:100%;height:auto}
-a{color:inherit}
-h1,h2,h3{margin:0;font-weight:700;line-height:1.12}
-.wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
-html[lang=de] body [lang=en],html[lang=en] body [lang=de]{display:none!important}
+html,body{margin:0;min-height:100%}
+body{display:flex;flex-direction:column;min-height:100vh;color:var(--ink);font:400 18px/1.6 Fredoka,system-ui,sans-serif;-webkit-font-smoothing:antialiased;
+  background:linear-gradient(180deg,#bfe6ff 0%,#e8f6ff 38%,#d8efb8 70%,#a9d97a 100%)}
+html[lang=de] [lang=en],html[lang=en] [lang=de]{display:none!important}
+main{flex:1;display:grid;place-items:center;padding:36px 20px}
+.card{width:min(620px,100%);background:rgba(255,253,247,.94);border-radius:28px;padding:clamp(20px,4vw,36px);text-align:center;box-shadow:0 18px 50px -18px rgba(27,50,25,.45)}
+.logo{width:min(280px,76%);height:auto;margin:0 auto 2px}
+.pigs{display:flex;justify-content:center;gap:12px;margin:6px 0 4px}
+.pigs img{width:min(42%,190px);height:auto}
+.kicker{display:inline-block;font:600 14px/1 Fredoka,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--leaf2);background:rgba(124,196,67,.16);padding:9px 16px;border-radius:99px;margin:10px 0 14px}
+h1{margin:0 0 10px;font-size:clamp(28px,5.5vw,40px);line-height:1.15;color:var(--deep)}
+p{margin:0 auto 22px;max-width:46ch;color:var(--muted)}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:56px;padding:0 30px;border-radius:99px;font:700 19px Fredoka,sans-serif;text-decoration:none;
+  background:linear-gradient(180deg,#ffb347,var(--carrot2));color:#3a1c00;box-shadow:0 6px 0 #c76400,0 14px 30px -8px rgba(240,125,0,.6);transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}.btn:active{transform:translateY(3px)}
 :focus-visible{outline:3px solid var(--carrot);outline-offset:3px;border-radius:8px}
-.kicker{display:inline-block;font:600 14px/1 Fredoka,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--leaf2);background:rgba(124,196,67,.14);padding:8px 14px;border-radius:99px}
-
-/* Knöpfe */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55em;min-height:56px;padding:0 30px;border-radius:99px;font:700 19px Fredoka,sans-serif;text-decoration:none;cursor:pointer;border:0;transition:transform .2s var(--ease),box-shadow .2s,background .2s}
-.btn svg{width:22px;height:22px;flex:none}
-.btn-play{background:linear-gradient(180deg,#ffb347,var(--carrot2));color:#3a1c00;box-shadow:0 6px 0 #c76400,0 14px 30px -8px rgba(240,125,0,.6)}
-.btn-play:hover{transform:translateY(-2px);box-shadow:0 8px 0 #c76400,0 18px 36px -8px rgba(240,125,0,.7)}
-.btn-play:active{transform:translateY(3px);box-shadow:0 3px 0 #c76400,0 8px 20px -8px rgba(240,125,0,.6)}
-.btn-soft{background:rgba(255,255,255,.85);color:var(--deep);box-shadow:0 4px 0 rgba(27,50,25,.18)}
-.btn-soft:hover{background:#fff;transform:translateY(-2px)}
-
-/* Navigation */
-.nav{position:fixed;inset:0 0 auto;z-index:20;transition:background .3s,box-shadow .3s}
-.nav.solid{background:rgba(251,246,234,.92);backdrop-filter:blur(12px);box-shadow:0 1px 0 var(--line)}
-.nav .wrap{display:flex;align-items:center;gap:20px;height:66px}
-.nav .brand{width:150px;flex:none;transition:opacity .3s}
-.nav:not(.solid) .brand{opacity:0;pointer-events:none}
-.nav ul{display:flex;gap:22px;list-style:none;margin:0 auto 0 8px;padding:0}
-.nav ul a{text-decoration:none;font-weight:600;font-size:16px;color:var(--deep);opacity:.75}
-.nav ul a:hover{opacity:1}
-.nav:not(.solid) ul a{color:#fff;opacity:.95;text-shadow:0 1px 8px rgba(0,0,0,.45)}
-.nav .right{display:flex;align-items:center;gap:10px;margin-left:auto}
-.lang{display:flex;background:rgba(255,255,255,.85);border-radius:99px;padding:3px;box-shadow:0 2px 0 rgba(27,50,25,.12)}
-.lang button{background:none;border:0;color:var(--muted);font:700 13px Fredoka,sans-serif;letter-spacing:.06em;padding:6px 11px;border-radius:99px;cursor:pointer}
-.lang button[aria-pressed=true]{background:var(--leaf);color:#173012}
-.nav .btn{min-height:42px;padding:0 20px;font-size:16px;box-shadow:0 4px 0 #c76400}
-
-/* Titel */
-.hero{position:relative;min-height:100svh;display:grid;align-items:end;isolation:isolate;overflow:hidden;color:#fff}
-.hero picture,.hero picture img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:62% 40%;z-index:-2}
-.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:
-  linear-gradient(90deg,rgba(14,32,10,.86) 0%,rgba(14,32,10,.6) 36%,rgba(14,32,10,0) 62%),
-  linear-gradient(180deg,rgba(14,32,10,.45) 0%,rgba(14,32,10,0) 20%,rgba(14,32,10,0) 58%,rgba(14,32,10,.85) 100%)}
-.hero .wrap{width:100%;padding-top:120px;padding-bottom:clamp(36px,7vh,80px)}
-.hero .logo{width:min(560px,86vw);filter:drop-shadow(0 8px 24px rgba(0,0,0,.35))}
-.hero h1{font-size:clamp(26px,3.4vw,42px);margin:18px 0 10px;max-width:20em;text-shadow:0 2px 14px rgba(0,0,0,.55)}
-.hero p.lead{max-width:36em;font-size:clamp(17px,1.6vw,20px);margin:0 0 28px;text-shadow:0 1px 10px rgba(0,0,0,.7)}
-.ctas{display:flex;flex-wrap:wrap;gap:14px}
-.facts{display:flex;flex-wrap:wrap;gap:10px;margin:30px 0 0;padding:0;list-style:none}
-.facts li{display:flex;align-items:center;gap:8px;font-weight:600;font-size:15px;background:rgba(255,255,255,.16);backdrop-filter:blur(6px);padding:8px 14px;border-radius:99px}
-.facts svg{width:18px;height:18px;color:var(--gold);flex:none}
-
-/* Abschnitte */
-section{padding:clamp(64px,9vw,112px) 0}
-.head{max-width:720px;margin:0 auto clamp(34px,5vw,52px);text-align:center}
-.head h2{font-size:clamp(30px,4.2vw,48px);margin:16px 0 12px;color:var(--deep)}
-.head p{color:var(--muted);margin:0;font-size:19px}
-.grid{display:grid;gap:20px}
-.g4{grid-template-columns:repeat(4,1fr)}
-.g3{grid-template-columns:repeat(3,1fr)}
-.g2{grid-template-columns:repeat(2,1fr)}
-.card{background:var(--card);border-radius:var(--r);padding:26px 24px 28px;box-shadow:0 2px 0 var(--line),0 18px 40px -26px rgba(27,50,25,.35);transition:transform .3s var(--ease)}
-.card:hover{transform:translateY(-4px)}
-.icon{width:62px;height:62px;border-radius:18px;display:grid;place-items:center;margin-bottom:16px}
-.icon svg{width:34px;height:34px}
-.card h3{font-size:23px;margin-bottom:8px;color:var(--deep)}
-.card p{margin:0;color:var(--muted);font-size:17px}
-.i-nose{background:#ffe3d3;color:#d9644a}.i-carrot{background:#ffe9c7;color:var(--carrot2)}.i-hide{background:#dff2cf;color:var(--leaf2)}.i-heart{background:#ffdde5;color:#e0475f}
-
-/* Welten */
-.worlds{background:var(--cream2)}
-.world{position:relative;border-radius:var(--r);overflow:hidden;min-height:300px;display:flex;align-items:flex-end;padding:26px;color:#fff;isolation:isolate;box-shadow:0 18px 40px -24px rgba(27,50,25,.5)}
-.world::before{content:"";position:absolute;inset:0;z-index:-1}
-.world .art{position:absolute;inset:0;z-index:-1}
-.world::after{content:"";position:absolute;inset:auto 0 0;height:58%;z-index:-1;background:linear-gradient(180deg,rgba(20,40,14,0),rgba(20,40,14,.55))}
-.world h3{font-size:30px;text-shadow:0 2px 10px rgba(0,0,0,.35)}
-.world p{margin:4px 0 0;font-size:17px;opacity:.95}
-.world .tag{position:absolute;top:18px;right:18px;font-weight:700;font-size:13px;letter-spacing:.06em;background:rgba(255,255,255,.9);color:var(--deep);padding:6px 12px;border-radius:99px}
-.w-garden{background:linear-gradient(180deg,#8fd3ff 0%,#c8ecff 45%,#8fd65a 46%,#5fae34 100%)}
-.w-forest{background:linear-gradient(180deg,#9ed6c5 0%,#d6efe4 40%,#4f8f3a 41%,#2f6427 100%)}
-.w-farm{background:linear-gradient(180deg,#ffd59a 0%,#ffeccc 44%,#c8d86a 45%,#93ad3c 100%)}
-
-/* Figuren */
-.pigs{display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:900px;margin:0 auto}
-.pig{display:flex;gap:20px;align-items:center;background:var(--card);border-radius:var(--r);padding:18px 24px 18px 18px;box-shadow:0 2px 0 var(--line),0 18px 40px -26px rgba(27,50,25,.35)}
-.pig img{width:140px;height:140px;border-radius:50%;background:#efede6;flex:none;object-fit:cover}
-.pig h3{font-size:28px;color:var(--deep)}
-.pig .trait{display:inline-block;margin-top:6px;font-weight:600;font-size:15px;color:var(--leaf2);background:rgba(124,196,67,.14);padding:4px 12px;border-radius:99px}
-.pig p{margin:10px 0 0;color:var(--muted);font-size:16px}
-
-/* Sammeln */
-.collect .card{text-align:center}
-.collect .num{font-size:44px;font-weight:700;color:var(--carrot2);line-height:1}
-.collect h3{margin-top:8px}
-
-/* Eltern */
-.parents{background:var(--deep);color:#eef6e6}
-.parents .head h2{color:#fff}
-.parents .head p{color:#c9dcc0}
-.checks{list-style:none;margin:0 auto;padding:0;max-width:820px;display:grid;grid-template-columns:1fr 1fr;gap:14px 28px}
-.checks li{display:flex;gap:12px;align-items:flex-start;font-size:17px;line-height:1.5}
-.checks svg{width:24px;height:24px;flex:none;color:var(--leaf);margin-top:2px}
-.parents .small{max-width:820px;margin:28px auto 0;color:#b9cdb0;font-size:15px;text-align:center}
-
-/* Schluss */
-.final{text-align:center}
-.final .logo{width:min(380px,70vw);margin:0 auto 18px}
-.final p{color:var(--muted);font-size:19px;margin:0 0 26px}
-footer{padding:34px 0 44px;border-top:1px solid var(--line);color:var(--muted);font-size:15px}
-footer .wrap{display:flex;flex-wrap:wrap;gap:12px 26px;align-items:center;justify-content:space-between}
-footer nav{display:flex;flex-wrap:wrap;gap:8px 22px}
-footer a{text-decoration:none}
-footer a:hover{text-decoration:underline}
-
-/* klein */
-@media (max-width:980px){.g4{grid-template-columns:repeat(2,1fr)}.nav ul{display:none}}
-@media (max-width:760px){
-  .g3,.g2,.pigs,.checks{grid-template-columns:1fr}
-  .world{min-height:220px}
-  .pig img{width:110px;height:110px}
-  .nav .btn span.long{display:none}
-}
-@media (max-width:760px){
-  .hero::after{background:linear-gradient(180deg,rgba(14,32,10,.5) 0%,rgba(14,32,10,.15) 18%,rgba(14,32,10,.55) 40%,rgba(14,32,10,.9) 70%,rgba(14,32,10,.95) 100%)}
-}
-@media (max-width:520px){
-  body{font-size:17px}
-  .g4{grid-template-columns:1fr}
-  .collect .g4{grid-template-columns:1fr 1fr;gap:12px}
-  .collect .card{padding:20px 12px}
-  .collect h3{font-size:19px}
-  .collect .card p{font-size:15px}
-  .btn{width:100%}
-  .nav .btn{width:auto}
-  .hero .wrap{padding-top:96px}
-  .pig{flex-direction:column;text-align:center;padding:22px}
-}
-@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+footer{padding:18px 20px 26px;text-align:center;font-size:15px;color:var(--deep)}
+footer a{margin:0 12px;color:inherit;text-decoration:underline;text-underline-offset:3px;padding:10px 4px;display:inline-block}
+.lang{position:fixed;top:12px;right:12px}
+.lang button{border:2px solid rgba(27,50,25,.2);background:rgba(255,255,255,.85);border-radius:99px;min-height:40px;min-width:48px;padding:0 14px;font:600 15px Fredoka,sans-serif;color:var(--deep);cursor:pointer}
 </style>
 </head>
 <body>
-
-<header class="nav" id="nav">
-  <div class="wrap">
-    <a class="brand" href="#top" aria-label="Wheek &amp; Seek"><img src="img/logo.webp" alt="Wheek &amp; Seek" width="1000" height="219"></a>
-    <ul>
-      <li><a href="#spiel"><span lang="de">So geht's</span><span lang="en">How to play</span></a></li>
-      <li><a href="#welten"><span lang="de">Welten</span><span lang="en">Worlds</span></a></li>
-      <li><a href="#eltern"><span lang="de">Für Eltern</span><span lang="en">For parents</span></a></li>
-    </ul>
-    <div class="right">
-      <div class="lang" role="group" aria-label="Sprache / Language">
-        <button type="button" data-set-lang="de" aria-pressed="true">DE</button>
-        <button type="button" data-set-lang="en" aria-pressed="false">EN</button>
-      </div>
-      <a class="btn btn-play" data-play href="https://www.crazygames.com/game/wheek-seek-ocf" target="_blank" rel="noopener"><span lang="de">Spielen</span><span lang="en">Play</span></a>
-    </div>
-  </div>
-</header>
-
-<main id="top">
-  <section class="hero" aria-label="Wheek &amp; Seek">
-    <picture>
-      <source media="(max-aspect-ratio: 4/5)" srcset="img/hero-hoch.webp">
-      <img src="img/hero.webp" alt="" width="1672" height="941" fetchpriority="high">
-    </picture>
-    <div class="wrap">
-      <img class="logo" src="img/logo.webp" alt="Wheek &amp; Seek" width="1000" height="219">
-      <h1><span lang="de">Ein gemütliches Abenteuer mit zwei Meerschweinchen</span><span lang="en">A cosy adventure with two guinea pigs</span></h1>
-      <p class="lead">
-        <span lang="de">Schnüffle dich mit Timmy und Dotty durch Garten, Wald und Bauernhof, finde das versteckte Futter und entwische den Schnecken. Kostenlos im Browser, ohne Anmeldung.</span>
-        <span lang="en">Sniff your way through garden, forest and farm with Timmy and Dotty, find the hidden food and slip away from the snails. Free in your browser, no sign-up.</span>
-      </p>
-      <div class="ctas">
-        <a class="btn btn-play" data-play href="https://www.crazygames.com/game/wheek-seek-ocf" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.4-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z" fill="currentColor"/></svg>
-          <span lang="de">Jetzt kostenlos spielen</span><span lang="en">Play now for free</span>
-        </a>
-        <a class="btn btn-soft" href="#spiel"><span lang="de">So geht's</span><span lang="en">How to play</span></a>
-      </div>
-      <ul class="facts">
-        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 21l1.6-7L2 9.2l7.1-.6z" fill="currentColor"/></svg><span lang="de">Kostenlos</span><span lang="en">Free</span></li>
-        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 21l1.6-7L2 9.2l7.1-.6z" fill="currentColor"/></svg><span lang="de">PC, Tablet und Handy</span><span lang="en">PC, tablet and phone</span></li>
-        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 21l1.6-7L2 9.2l7.1-.6z" fill="currentColor"/></svg><span lang="de">Für Kinder ab 7</span><span lang="en">For kids 7+</span></li>
-        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 21l1.6-7L2 9.2l7.1-.6z" fill="currentColor"/></svg><span lang="de">8 Sprachen</span><span lang="en">8 languages</span></li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="spiel">
-    <div class="wrap">
-      <div class="head">
-        <span class="kicker"><span lang="de">So geht's</span><span lang="en">How to play</span></span>
-        <h2><span lang="de">Schnüffeln, finden, verstecken</span><span lang="en">Sniff, find, hide</span></h2>
-        <p><span lang="de">Jede Runde wächst neues Futter, ein bisschen mehr als zuvor. Wie weit kommst du?</span><span lang="en">Fresh food grows every round, a little more each time. How far can you go?</span></p>
-      </div>
-      <div class="grid g4">
-        <article class="card">
-          <div class="icon i-nose"><svg viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="13" rx="8" ry="6.5" fill="currentColor" opacity=".25"/><path d="M9 13.2c0-1.4 1.3-2.4 3-2.4s3 1 3 2.4c0 1-.9 1.6-1.6 1.9l-1.4.6-1.4-.6C9.9 14.8 9 14.2 9 13.2z" fill="currentColor"/><path d="M12 15.8v2.2m0 0c-1 1-2.5 1-3.3.2M12 18c1 1 2.5 1 3.3.2" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg></div>
-          <h3><span lang="de">Schnüffeln</span><span lang="en">Sniff</span></h3>
-          <p><span lang="de">Die Nase zeigt dir eine Duftspur. Folge den kleinen Duftwolken zum nächsten Leckerbissen.</span><span lang="en">Your nose shows a scent trail. Follow the little scent clouds to the next snack.</span></p>
-        </article>
-        <article class="card">
-          <div class="icon i-carrot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 9.5l-9.8 9.8c-.6.6.2 1.4.8.8l9.8-9.8-.8-.8z" fill="currentColor" opacity=".35"/><path d="M15.6 8.4c-1.6-1.6-4.2-1.4-5.6.3L4.3 16c-.9 1.1.6 2.6 1.7 1.7l7.3-5.7c1.7-1.4 1.9-4 .3-5.6z" fill="currentColor"/><path d="M15 9l2.5-5M15 9l5-2.5M15 9l3.5-1" stroke="#4f9a2c" stroke-width="1.8" stroke-linecap="round"/></svg></div>
-          <h3><span lang="de">Futter finden</span><span lang="en">Find food</span></h3>
-          <p><span lang="de">Möhren, Gurke, Paprika, Löwenzahn und mit etwas Glück die goldene Möhre.</span><span lang="en">Carrots, cucumber, pepper, dandelion and, with a little luck, the golden carrot.</span></p>
-        </article>
-        <article class="card">
-          <div class="icon i-hide"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20c1-5 2-9 3-11 .6 3 .9 7 1 11M8 20c.5-6 1.6-11 3-14 1 4 1.4 9 1.5 14M13 20c.6-4 1.6-8 3-10 .8 3 1.2 6 1.3 10M18 20c.3-3 .9-5 2-6.5" stroke="currentColor" stroke-width="1.9" fill="none" stroke-linecap="round"/></svg></div>
-          <h3><span lang="de">Verstecken</span><span lang="en">Hide</span></h3>
-          <p><span lang="de">Schnecken, Hummeln und Igel kosten Herzen. Im hohen Gras oder in einem Häuschen bist du sicher.</span><span lang="en">Snails, bumblebees and hedgehogs cost hearts. In tall grass or a little house you are safe.</span></p>
-        </article>
-        <article class="card">
-          <div class="icon i-heart"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7.5-4.6-7.5-10A4.3 4.3 0 0 1 12 7.4 4.3 4.3 0 0 1 19.5 10c0 5.4-7.5 10-7.5 10z" fill="currentColor"/></svg></div>
-          <h3><span lang="de">Kuscheln</span><span lang="en">Cuddle</span></h3>
-          <p><span lang="de">Im Gehege wartet dein Freund. Kuscheln gibt Kraft und Herzen zurück, im Nest geht's schlafen.</span><span lang="en">Your friend waits in the pen. Cuddles give back strength and hearts, the nest is where you sleep.</span></p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="worlds" id="welten">
-    <div class="wrap">
-      <div class="head">
-        <span class="kicker"><span lang="de">Drei Welten</span><span lang="en">Three worlds</span></span>
-        <h2><span lang="de">Aus Meerschweinchen-Sicht ist alles riesig</span><span lang="en">From a guinea pig's view, everything is huge</span></h2>
-        <p><span lang="de">Unterwegs entdeckst du 14 Tiere für dein Tierbuch.</span><span lang="en">Along the way you discover 14 animals for your animal book.</span></p>
-      </div>
-      <div class="grid g3">
-        <article class="world w-garden">
-          <svg class="art" viewBox="0 0 300 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><circle cx="250" cy="52" r="26" fill="#fff4b0"/><g fill="#fff" opacity=".9"><ellipse cx="70" cy="60" rx="34" ry="12"/><ellipse cx="95" cy="52" rx="22" ry="12"/></g><path d="M196 138l36-30 36 30v40h-72z" fill="#e8655a"/><rect x="204" y="138" width="56" height="42" fill="#fbe7c6"/><rect x="224" y="152" width="16" height="28" fill="#a9643a"/><g fill="#ffd93d"><circle cx="150" cy="168" r="5"/><circle cx="182" cy="176" r="5"/></g><g fill="#fff"><circle cx="166" cy="186" r="5"/></g></svg>
-          <div><h3><span lang="de">Garten</span><span lang="en">Garden</span></h3><p><span lang="de">Igel, Amseln und eine Rutsche</span><span lang="en">Hedgehogs, blackbirds and a slide</span></p></div>
-        </article>
-        <article class="world w-forest">
-          <svg class="art" viewBox="0 0 300 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><g fill="#2f6427"><path d="M40 140l30-70 30 70z"/><path d="M110 132l36-84 36 84z"/><path d="M200 140l30-66 30 66z"/></g><g fill="#7a4a2a"><rect x="64" y="140" width="12" height="20"/><rect x="140" y="132" width="12" height="28"/><rect x="224" y="140" width="12" height="20"/></g><path d="M232 176a18 14 0 0 1 36 0z" fill="#e8483e"/><g fill="#fff"><circle cx="242" cy="168" r="3"/><circle cx="256" cy="164" r="3"/></g><rect x="246" y="176" width="8" height="12" fill="#f4ead2"/></svg>
-          <div><h3><span lang="de">Wald</span><span lang="en">Forest</span></h3><p><span lang="de">Rehe, Eichhörnchen und Fliegenpilze</span><span lang="en">Deer, squirrels and toadstools</span></p></div>
-        </article>
-        <article class="world w-farm">
-          <span class="tag"><span lang="de">ab Level 5</span><span lang="en">from level 5</span></span>
-          <svg class="art" viewBox="0 0 300 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><path d="M150 76l60 44v58h-120v-58z" fill="#d2453c"/><rect x="130" y="138" width="40" height="40" fill="#fff"/><path d="M130 138l40 40M170 138l-40 40" stroke="#d2453c" stroke-width="5"/><rect x="226" y="100" width="22" height="78" rx="11" fill="#cfd6dc"/><g fill="#f2cf5b"><ellipse cx="54" cy="166" rx="24" ry="15"/></g><g fill="#fff"><ellipse cx="262" cy="190" rx="18" ry="12"/></g><circle cx="276" cy="185" r="6" fill="#3a3a3a"/></svg>
-          <div><h3><span lang="de">Bauernhof</span><span lang="en">Farm</span></h3><p><span lang="de">Hühner, Schafe und Heu</span><span lang="en">Hens, sheep and hay</span></p></div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section id="figuren">
-    <div class="wrap">
-      <div class="head">
-        <span class="kicker"><span lang="de">Die beiden</span><span lang="en">The two of them</span></span>
-        <h2><span lang="de">Timmy und Dotty</span><span lang="en">Timmy and Dotty</span></h2>
-        <p><span lang="de">Such dir aus, wer auf Futtersuche geht. Der andere wartet im Gehege und antwortet, wenn du rufst: Wheek!</span><span lang="en">Pick who goes foraging. The other one waits in the pen and answers when you call: Wheek!</span></p>
-      </div>
-      <div class="pigs">
-        <article class="pig">
-          <img src="img/timmy.webp" alt="Timmy" width="520" height="520" loading="lazy">
-          <div>
-            <h3>Timmy</h3>
-            <span class="trait"><span lang="de">mutig und neugierig</span><span lang="en">brave and curious</span></span>
-            <p><span lang="de">Steckt seine Nase in jede Ecke und ist immer als Erster am Futter.</span><span lang="en">Pokes his nose into every corner and is always first at the food.</span></p>
-          </div>
-        </article>
-        <article class="pig">
-          <img src="img/dotty.webp" alt="Dotty" width="520" height="520" loading="lazy">
-          <div>
-            <h3>Dotty</h3>
-            <span class="trait"><span lang="de">flink und verschmust</span><span lang="en">quick and cuddly</span></span>
-            <p><span lang="de">Flitzt den Schnecken davon und kuschelt danach am liebsten im Heu.</span><span lang="en">Zips away from the snails and loves a cuddle in the hay afterwards.</span></p>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="collect worlds">
-    <div class="wrap">
-      <div class="head">
-        <span class="kicker"><span lang="de">Sammeln</span><span lang="en">Collect</span></span>
-        <h2><span lang="de">Immer gibt es etwas Neues</span><span lang="en">There's always something new</span></h2>
-      </div>
-      <div class="grid g4">
-        <article class="card"><div class="num">21</div><h3><span lang="de">Sticker</span><span lang="en">Stickers</span></h3><p><span lang="de">für dein Album</span><span lang="en">for your album</span></p></article>
-        <article class="card"><div class="num">14</div><h3><span lang="de">Tiere</span><span lang="en">Animals</span></h3><p><span lang="de">im Tierbuch, mit kleinen Tier-Fakten</span><span lang="en">in the animal book, with little facts</span></p></article>
-        <article class="card"><div class="num">11</div><h3><span lang="de">Hüte und mehr</span><span lang="en">Hats and more</span></h3><p><span lang="de">im Kleiderschrank, vom Strohhut bis zur Krone</span><span lang="en">in the wardrobe, from straw hat to crown</span></p></article>
-        <article class="card"><div class="num">3</div><h3><span lang="de">Tagesaufgaben</span><span lang="en">Daily quests</span></h3><p><span lang="de">jeden Tag neu, mit Schatz und Geschenk</span><span lang="en">new every day, with a treasure and a gift</span></p></article>
-      </div>
-    </div>
-  </section>
-
-  <section class="parents" id="eltern">
-    <div class="wrap">
-      <div class="head">
-        <span class="kicker" style="color:#bfe79a;background:rgba(124,196,67,.18)"><span lang="de">Für Eltern</span><span lang="en">For parents</span></span>
-        <h2><span lang="de">Gemacht für Kinder ab 7</span><span lang="en">Made for kids aged 7 and up</span></h2>
-        <p><span lang="de">Ein ruhiges Spiel ohne Druck, mit kurzen Texten und einer Anleitung, die man einfach nachspielt.</span><span lang="en">A calm game without pressure, with short texts and a tutorial you simply play along.</span></p>
-      </div>
-      <ul class="checks">
-        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7" stroke="currentColor" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><span><span lang="de">Keine Anmeldung, keine Angaben zur Person</span><span lang="en">No sign-up, no personal details</span></span></li>
-        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7" stroke="currentColor" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><span><span lang="de">Kein Chat und keine Käufe</span><span lang="en">No chat and no purchases</span></span></li>
-        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7" stroke="currentColor" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><span><span lang="de">Keine Gewalt: Wer erwischt wird, verliert nur ein Herz</span><span lang="en">No violence: getting caught only costs a heart</span></span></li>
-        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7" stroke="currentColor" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><span><span lang="de">Werbung nur von der Spieleplattform: kurze Videos zwischen Runden und freiwillige Belohnungsvideos</span><span lang="en">Ads only from the game platform: short videos between rounds and optional reward videos</span></span></li>
-        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7" stroke="currentColor" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><span><span lang="de">In 8 Sprachen, auch auf dem Handy und Tablet</span><span lang="en">In 8 languages, also on phones and tablets</span></span></li>
-        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7" stroke="currentColor" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><span><span lang="de">Diese Website: keine Cookies, kein Tracking</span><span lang="en">This website: no cookies, no tracking</span></span></li>
-      </ul>
-      <p class="small"><span lang="de">Mehr dazu in der <a href="datenschutz.html">Datenschutzerklärung</a>.</span><span lang="en">More in the <a href="datenschutz.html#en">privacy policy</a>.</span></p>
-    </div>
-  </section>
-
-  <section class="final">
-    <div class="wrap">
-      <img class="logo" src="img/logo-stacked.webp" alt="Wheek &amp; Seek" width="600" height="410">
-      <p><span lang="de">Bereit für die Futtersuche?</span><span lang="en">Ready to go foraging?</span></p>
-      <a class="btn btn-play" data-play href="https://www.crazygames.com/game/wheek-seek-ocf" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.4-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z" fill="currentColor"/></svg>
-        <span lang="de">Jetzt kostenlos spielen</span><span lang="en">Play now for free</span>
-      </a>
-    </div>
+<div class="lang"><button id="lang" type="button" aria-label="Deutsch / English">EN</button></div>
+<main>
+  <section class="card">
+    <img class="logo" src="img/logo.webp" alt="Wheek &amp; Seek" width="560" height="142">
+    <div class="pigs"><img src="img/timmy-neu.webp" alt="" width="420" height="261"><img src="img/dotty-neu.webp" alt="" width="420" height="261"></div>
+    <span class="kicker"><span lang="de">Im Umbau</span><span lang="en">Under construction</span></span>
+    <h1><span lang="de">Hier entsteht etwas Neues</span><span lang="en">Something new is coming</span></h1>
+    <p lang="de">Wheek &amp; Seek bekommt ein neues Spiel: Du und ein anderes Meerschweinchen brecht gleichzeitig aus dem Gehege aus und sucht um die Wette Futter. Bis die neue Seite fertig ist, kannst du das Spiel kostenlos bei CrazyGames spielen.</p>
+    <p lang="en">Wheek &amp; Seek is getting a new game: you and another guinea pig break out of the pen at the same time and race to find food. Until the new site is ready, you can play for free on CrazyGames.</p>
+    <a class="btn" href="https://www.crazygames.com/game/wheek-seek-ocf" rel="noopener"><span lang="de">Auf CrazyGames spielen</span><span lang="en">Play on CrazyGames</span></a>
   </section>
 </main>
-
 <footer>
-  <div class="wrap">
-    <span>© 2026 denkgold · Wheek &amp; Seek</span>
-    <nav>
-      <a href="impressum.html"><span lang="de">Impressum</span><span lang="en">Legal notice</span></a>
-      <a href="datenschutz.html"><span lang="de">Datenschutz</span><span lang="en">Privacy</span></a>
-    </nav>
-  </div>
+  <a href="impressum.html"><span lang="de">Impressum</span><span lang="en">Legal notice</span></a>
+  <a href="datenschutz.html"><span lang="de">Datenschutz</span><span lang="en">Privacy</span></a>
 </footer>
-
 <script>
-// Wohin „Spielen“ führt. Einmal hier ändern, gilt für alle Knöpfe.
-var PLAY_URL = 'https://www.crazygames.com/game/wheek-seek-ocf';
 (function () {
-  document.querySelectorAll('[data-play]').forEach(function (a) { a.href = PLAY_URL; });
-  // Sprache: gespeicherte Wahl, sonst Browser (Deutsch nur für deutschsprachige Browser)
-  var KEY = 'wheek-site-lang';
-  function apply(l) {
-    document.documentElement.lang = l;
-    document.querySelectorAll('[data-set-lang]').forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.setLang === l)); });
-    document.title = l === 'de' ? 'Wheek & Seek – Meerschweinchen-Abenteuer · Kostenlos im Browser spielen' : 'Wheek & Seek – Guinea Pig Adventure · Play free in your browser';
-  }
-  var saved = null;
-  try { saved = localStorage.getItem(KEY); } catch (e) {}
-  var langs = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || ''];
-  apply(saved === 'de' || saved === 'en' ? saved : /^de/i.test(langs[0] || '') ? 'de' : 'en');
-  document.querySelectorAll('[data-set-lang]').forEach(function (b) {
-    b.addEventListener('click', function () {
-      apply(b.dataset.setLang);
-      try { localStorage.setItem(KEY, b.dataset.setLang); } catch (e) {}
-    });
-  });
-  // Navigation bekommt beim Scrollen einen Hintergrund
-  var nav = document.getElementById('nav');
-  function onScroll() { nav.classList.toggle('solid', window.scrollY > 60); }
-  addEventListener('scroll', onScroll, { passive: true });
-  onScroll();
+  var de = /^de/i.test(navigator.language || "");
+  var el = document.documentElement, b = document.getElementById("lang");
+  function set(l) { el.lang = l; b.textContent = l === "de" ? "EN" : "DE"; }
+  set(de ? "de" : "en");
+  b.addEventListener("click", function () { set(el.lang === "de" ? "en" : "de"); });
 })();
 </script>
 </body>
