@@ -187,12 +187,18 @@ footer small{opacity:.75}
 @media(max-width:700px){.facts{position:relative;background:var(--deeper)}}
 @media(max-width:560px){.keys{grid-template-columns:1fr;gap:4px}.keys .k{margin-top:12px}.keys span.t{margin-bottom:4px}}
 
-/* ---- 3.0: the cover carries its own big logo, so the menu bar is solid from the start and the picture begins below it (nothing runs over the logo) */
+/* ---- 3.0: the cover carries its own logo and title: the whole picture is shown (never cropped), as wide as the window allows but not taller than about
+   two thirds of it, centred; the title, the text and the buttons stand under it. Smaller or bigger window: the picture scales with it. */
 header.top{background:rgba(27,50,25,.94);backdrop-filter:blur(10px)}
 @media(min-width:701px){
-  .hero{padding-top:68px}
-  .hero picture{inset:68px 0 0 0;height:auto}
-  .hero picture img{inset:0;height:100%}
-  .hero picture img{object-position:60% 0%;filter:saturate(.95) brightness(.98) contrast(1)}
+  .hero{display:flex;flex-direction:column;align-items:center;min-height:0;padding:68px 0 0;background:var(--deep)}
+  .hero::after{display:none}
+  .hero picture{position:relative;inset:auto;display:block;width:clamp(min(100%,520px),calc((100svh - 300px) * 16 / 9),min(100%,1180px));aspect-ratio:16/9;height:auto;margin:0 auto}
+  .hero picture img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;filter:none;animation:none}
+  .hero .in{position:relative;width:100%;padding:24px 0 30px;text-align:center}
+  .hero h1{max-width:none;margin:0 auto;text-shadow:none}
+  .hero .sub{margin:10px auto 20px;text-shadow:none}
+  .hero .cta{justify-content:center}
+  .facts{position:relative;width:100%}
 }
 @media(max-width:700px){.hero picture img{filter:none}}
