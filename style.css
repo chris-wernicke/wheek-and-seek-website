@@ -186,3 +186,13 @@ footer a{text-decoration:underline;text-underline-offset:3px;margin-right:18px;d
 footer small{opacity:.75}
 @media(max-width:700px){.facts{position:relative;background:var(--deeper)}}
 @media(max-width:560px){.keys{grid-template-columns:1fr;gap:4px}.keys .k{margin-top:12px}.keys span.t{margin-bottom:4px}}
+
+/* ---- 3.0: the cover carries its own big logo, so the menu bar is solid from the start and the picture begins below it (nothing runs over the logo) */
+header.top{background:rgba(27,50,25,.94);backdrop-filter:blur(10px)}
+@media(min-width:701px){
+  .hero{padding-top:68px}
+  .hero picture{inset:68px 0 0 0;height:auto}
+  .hero picture img{inset:0;height:100%}
+  .hero picture img{object-position:60% 0%;filter:saturate(.95) brightness(.98) contrast(1)}
+}
+@media(max-width:700px){.hero picture img{filter:none}}
